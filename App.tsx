@@ -13,6 +13,7 @@ import { REALM_APP_ID } from '@env';
 import { Home } from './src/screens/Home';
 import { Routes } from './src/routes';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { RealmProvider } from './src/libs/realm';
 
 
 export default function App() {
@@ -34,7 +35,9 @@ export default function App() {
           backgroundColor={"transparent"} 
           translucent/>
         <UserProvider fallback={SignIn}>
+          <RealmProvider>
             <Routes/>
+          </RealmProvider>
         </UserProvider>
         </SafeAreaProvider>
       </ThemeProvider>
