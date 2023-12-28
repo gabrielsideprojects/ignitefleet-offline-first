@@ -13,9 +13,9 @@ export class Historic extends Realm.Object<Historic> {
     user_id!:string;
     license_plate!:string;
     description!: string;
-    status!: boolean;
-    created_at!:string;
-    updated_at!:string;
+    status!: string;
+    created_at!:Date;
+    updated_at!:Date;
     
     static generate({
         user_id,license_plate,description
